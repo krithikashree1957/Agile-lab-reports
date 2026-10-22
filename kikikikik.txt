@@ -1,0 +1,21 @@
+## Practice Problem Statement
+
+Create a **Python Flask Inventory API** and implement a complete **seven-stage CI/CD pipeline** using GitHub Actions on a Windows-based development environment with Docker Desktop and Kubernetes.
+
+The application should provide an endpoint that returns:
+
+```text
+Inventory service is running
+```
+
+The pipeline must include the following seven stages:
+
+1. Source checkout  
+2. Python environment and dependency setup  
+3. Automated application testing  
+4. Docker image creation  
+5. Docker Hub image publishing  
+6. Kubernetes deployment  
+7. Deployment and application verification  
+
+The Flask application must run on port `5000`. Create a Dockerfile and Kubernetes manifest files containing a Deployment named `inventory-api-deployment` and a NodePort Service named `inventory-api-service`. The Kubernetes Deployment should run one replica of the application and expose it through a NodePort service. Store Docker Hub credentials securely using GitHub repository secrets. The final pipeline execution must confirm that the Docker image was published, the Kubernetes pod is running, and the Inventory API is accessible from the Windows machine.
